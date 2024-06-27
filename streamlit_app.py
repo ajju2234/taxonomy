@@ -6,6 +6,15 @@ import spacy
 from fuzzywuzzy import process
 import random
 
+# Load spaCy model
+try:
+    nlp = spacy.load('en_core_web_sm')
+except OSError:
+    st.warning("SpaCy model 'en_core_web_sm' not found. Downloading...")
+    from spacy.cli import download
+    download('en_core_web_sm')
+    nlp = spacy.load('en_core_web_sm')
+
 # Load and preprocess the CSV file
 file_path = 'data.csv'
 df = pd.read_csv(file_path)
@@ -18,9 +27,6 @@ df['Level 2: Subcategories'].ffill(inplace=True)
 df = df.set_index(['Level 1: Categories', 'Level 2: Subcategories'])['Level 3: Detailed Subcategories'].str.split(', ', expand=True).stack().reset_index()
 df.columns = ['Level 1', 'Level 2', 'level_3', 'Level 3']
 df = df.drop('level_3', axis=1)
-
-# Initialize spaCy for keyword extraction
-nlp = spacy.load('en_core_web_sm')
 
 # Initialize TF-IDF Vectorizer
 vectorizer = TfidfVectorizer(stop_words='english')
@@ -151,16 +157,14 @@ st.markdown(
 # Streamlit app
 st.markdown('<div class="main-container">', unsafe_allow_html=True)
 st.markdown('<div class="title">Textile Taxonomy Chatbot</div>', unsafe_allow_html=True)
-st.markdown('<div class="subheader">Enter a query to find similar textile categories:</div>', unsafe_allow_html=True)
+st.markdown('<div class="subheader">Find the best match for your textile query</div>', unsafe_allow_html=True)
 
 input_text = st.text_input("Query", "", key="query", help="Type your query here", max_chars=100)
-
-if st.button("Find Similar", key="find_similar", help="Click to find similar categories"):
+if st.button('Find'):
     if input_text:
-        response = find_similar(input_text, n=3)
+        response = find_similar(input_text, n=1)
         st.markdown(f'<div class="response">{response}</div>', unsafe_allow_html=True)
     else:
-        st.write("Please enter a query.")
+        st.warning("Please enter a query.")
 
 st.markdown('</div>', unsafe_allow_html=True)
-

@@ -4,3 +4,4 @@ scikit-learn
 spacy
 fuzzywuzzy
 python-Levenshtein
+./setup.sh
