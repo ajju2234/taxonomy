@@ -1,0 +1,36 @@
+Text,Level1,Level2
+Cotton,Raw Materials,Natural Fibers
+Wool,Raw Materials,Natural Fibers
+Polyester,Raw Materials,Synthetic Fibers
+Nylon,Raw Materials,Synthetic Fibers
+Ring Spinning,Manufacturing Processes,Spinning
+Open-End Spinning,Manufacturing Processes,Spinning
+Plain Weave,Manufacturing Processes,Weaving
+Twill Weave,Manufacturing Processes,Weaving
+Reactive Dyeing,Manufacturing Processes,Dyeing and Printing
+Acid Dyeing,Manufacturing Processes,Dyeing and Printing
+Mechanical Finishing,Manufacturing Processes,Finishing
+Chemical Finishing,Manufacturing Processes,Finishing
+Woven Fabrics,Textile Products,Fabrics
+Knitted Fabrics,Textile Products,Fabrics
+Non-woven Fabrics,Textile Products,Fabrics
+Casual Wear,Textile Products,Apparel
+Formal Wear,Textile Products,Apparel
+Sportswear,Textile Products,Apparel
+Bedding,Textile Products,Home Textiles
+Towels,Textile Products,Home Textiles
+Curtains,Textile Products,Home Textiles
+Geotextiles,Industrial Textiles,Industrial Textiles
+Medical Textiles,Industrial Textiles,Industrial Textiles
+Protective Textiles,Industrial Textiles,Industrial Textiles
+Clothing,Applications,Fashion and Apparel
+Accessories,Applications,Fashion and Apparel
+Furniture,Applications,Home and Interior
+Decor,Applications,Home and Interior
+Construction,Applications,Technical and Industrial Uses
+Medical,Applications,Technical and Industrial Uses
+Automotive,Applications,Eco-Friendly Materials
+Agricultural,Applications,Eco-Friendly Materials
+Organic Cotton,Sustainability,Sustainable Manufacturing Practices
+Recycled Fibers,Sustainability,Sustainable Manufacturing Practices
+Bamboo,Sustainability,Ethical Practices
