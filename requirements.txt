@@ -1,7 +1,6 @@
-streamlit
+streamlit==1.36.0
 pandas
 scikit-learn
-spacy
+spacy==3.2.0
 fuzzywuzzy
 python-Levenshtein
-./setup.sh
