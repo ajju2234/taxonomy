@@ -6,6 +6,12 @@ import spacy
 from fuzzywuzzy import process
 import random
 
+import os
+os.environ['THINC_NO_GPU'] = '1'
+
+
+
+
 # Load spaCy model
 try:
     nlp = spacy.load('en_core_web_sm')
